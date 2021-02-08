@@ -16,12 +16,10 @@
         <img src="logo.png" alt="logo" />
         <select name="genre" v-model="selected">
           <option value=""></option>
-          <option v-for="element in diskList">{{element.genre}}</option>
-
+          <option v-for="element in genre">{{element}}</option>
         </select>
       </div>
     </header>
-
     <div class="cds-container container">
       <!-- Disco ad esempio -->
       <div v-for="element in diskList" v-if="filterGenre(element)" class="cd">
@@ -32,8 +30,6 @@
       </div>
     </div>
   </div>
-
-
   <script src="main.js" charset="utf-8"></script>
 </body>
 </html>
